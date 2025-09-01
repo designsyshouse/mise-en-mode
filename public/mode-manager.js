@@ -1,4 +1,3 @@
-
 /**
  * Adds a custom toString function to the given object.
  * Includes enumerable: false, to hide the custom toString
@@ -79,7 +78,7 @@ function linkify() {
 /**
  * Observes for modes introduced on the client-side.
  * 
- * @param {String|Array<String>} preload - Modes that have been preloaded
+ * @param {String} preload - Modes that have been preloaded
  */
 function observer(preload = '') {
     // Ingest stringified param as preloaded modes.

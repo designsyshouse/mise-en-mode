@@ -76,8 +76,6 @@ export function getInventory() {
             mode,
             css,
             href: `_${name}.css`,
-            bytes: Buffer.byteLength(css, 'utf8'),
-            coverage: Object.keys(tokens),
             ...metadata
         });
     }, []);
