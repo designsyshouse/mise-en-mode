@@ -71,11 +71,11 @@ app.get("/", (req, res) => {
     <html lang="en">
       <head>
         <meta charset="UTF-8"/>
-        <title>Minimal Express Example</title>
+        <title>Minimal HTML Example</title>
         ${modeManager()}
       </head>
       <body>
-        <h1>Hello from Express</h1>
+        <h1>Hello world</h1>
       </body>
     </html>
   `;
@@ -99,11 +99,11 @@ Otherwise, place the `mode-manager.js` in a `/public`-like directory and use as 
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Minimal Express Example</title>
+        <title>Minimal HTML Example</title>
         <script type="module" src="mode-manager.js"></script>
     </head>
     <body>
-        <h1>Hello from Express</h1>
+        <h1>Hello world</h1>
     </body>
 </html>
 ```
