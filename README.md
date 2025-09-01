@@ -55,7 +55,7 @@ The represents the public directory for your project, as all files here should b
 
 This resource is meant to manage how modes are introduced onto the page. It has the ability to render the mode CSS on the server (if used in SSR) and on the client. This is important as modes may be introduced throughout the lifecycle of the page through dynamic means.
 
-While located within the `/public` folder and is being executed on the client, this code is written to be [isomorphic](https://en.wikipedia.org/wiki/Isomorphic_JavaScript). This means that if your project is server-side rendered in a JavaScript ecosystem, you could instead execute this function to produce the necessary resources for insertion into the `<head/>` of the page.
+While located within the `/public` folder and is being executed on the client, this code is written to be [isomorphic](https://en.wikipedia.org/wiki/Isomorphic_JavaScript). This means that if your project is server-side rendered in a JavaScript ecosystem, you could instead execute this function to produce the necessary HTML resources for insertion into the `<head/>` of the page.
 
 ```js
 // server.js
@@ -91,8 +91,7 @@ app.listen(port, () => {
 });
 
 ```
-
-Otherwise, place the `mode-manager.js` in a `/public`-like directory and use as a module.
+This will immediately write the HTML resources that would otherwise be appended to the `<head/>` on the client. Otherwise, place the `mode-manager.js` in a `/public`-like directory and use as a module. Resources will be added dynamically on page load.
 
 ```html
 <!DOCTYPE html>
@@ -107,4 +106,3 @@ Otherwise, place the `mode-manager.js` in a `/public`-like directory and use as 
     </body>
 </html>
 ```
-
