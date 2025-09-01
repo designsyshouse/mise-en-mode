@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=./_schema.json
+mode: null
+tokens:
+  $surface_primary_backgroundColor:
+    $value: null
+  $surface_primary_foregroundColor:
+    $value: null
+  $surface_primary_borderColor:
+    $value: null
+  $surface_secondary_backgroundColor:
+    $value: null
+  $surface_secondary_foregroundColor:
+    $value: null
+  $surface_secondary_borderColor:
+    $value: null
+  $surface_auxiliary_backgroundColor:
+    $value: null
+  $surface_auxiliary_foregroundColor:
+    $value: null
+  $surface_auxiliary_borderColor:
+    $value: null
+  $action_primary_backgroundColor:
+    $value: null
+  $action_primary_foregroundColor:
+    $value: null
+  $action_primary_borderColor:
+    $value: null
+  $action_secondary_backgroundColor:
+    $value: null
+  $action_secondary_foregroundColor:
+    $value: null
+  $action_secondary_borderColor:
+    $value: null
+  $action_auxiliary_backgroundColor:
+    $value: null
+  $action_auxiliary_foregroundColor:
+    $value: null
+  $action_auxiliary_borderColor:
+    $value: null
+  $control_backgroundColor:
+    $value: null
+  $control_foregroundColor:
+    $value: null
+  $control_borderColor:
+    $value: null
+  $text_primary_fontFamily:
+    $value: null
+    $fallback: null
+  $text_primary_fontWeight:
+    $value: null
+  $text_primary_fontSize:
+    $value: null
+  $text_primary_lineHeight:
+    $value: null
+  $text_secondary_fontFamily:
+    $value: null
+    $fallback: null
+  $text_secondary_fontWeight:
+    $value: null
+  $text_secondary_fontSize:
+    $value: null
+  $text_secondary_lineHeight:
+    $value: null
+  $text_secondary_scaleFactor:
+    $value: null
+  $text_auxiliary_fontFamily:
+    $value: null
+    $fallback: null
+  $text_auxiliary_fontWeight:
+    $value: null
+  $text_auxiliary_fontSize:
+    $value: null
+  $text_auxiliary_lineHeight:
+    $value: null

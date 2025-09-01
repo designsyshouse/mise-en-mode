@@ -1,0 +1,21 @@
+{
+  "name": "mise-en-mode",
+  "version": "1.0.0",
+  "description": "Infrastructure code support for Mise en Mode",
+  "type": "module",
+  "scripts": {
+    "bootstrap:mode": "node infrastructure/bootstrap-mode.js",
+    "write:files": "node infrastructure/write-files.js"
+  },
+  "keywords": [
+    "Mise en Mode",
+    "design tokens",
+    "theming",
+    "expressions"
+  ],
+  "author": "Donnie D'Amato <donnie@ds.house>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

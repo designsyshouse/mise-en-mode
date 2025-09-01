@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=./_schema.json
+mode: dark
+tokens:
+  $surface_primary_backgroundColor:
+    $value: CanvasText
+  $text_primary_fontFamily:
+    $value: Arial
+    $fallback: sans-serif

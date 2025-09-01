@@ -1,0 +1,20 @@
+[
+  {
+    "mode": "dark",
+    "href": "_dark.css",
+    "bytes": 110,
+    "coverage": [
+      "$surface_primary_backgroundColor",
+      "$text_primary_fontFamily"
+    ]
+  },
+  {
+    "mode": "light",
+    "href": "_light.css",
+    "bytes": 108,
+    "coverage": [
+      "$surface_primary_backgroundColor",
+      "$text_primary_fontFamily"
+    ]
+  }
+]
