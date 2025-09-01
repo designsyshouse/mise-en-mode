@@ -1,6 +1,7 @@
 import { readFileSync as read, readdirSync } from 'node:fs';
 import { join, parse } from 'node:path';
 import { load } from 'js-yaml';
+import { toList } from './to-list.js';
 import { toVar } from './to-var.js';
 
 import { MODES_DIR } from './paths.js';
@@ -17,16 +18,6 @@ function toDeclaration([intent, metadata]) {
 }
 
 /**
- * Creates a list of CSS declarations.
- * 
- * @param {Array<Record<String, Object>>} tokens - A collection of intent assignments.
- * @returns {String} - A list of CSS declarations
- */
-function toDeclarations(tokens) {
-    return Object.entries(tokens).map(toDeclaration).join('\n');
-}
-
-/**
  * Creates the representative CSS from a mode.
  * 
  * @param {String} mode - The alias for the mode
@@ -34,7 +25,7 @@ function toDeclarations(tokens) {
  * @returns {String} - A CSS declaration block of property-value assignments
  */
 function toCss(mode, tokens) {
-    const declarations = toDeclarations(tokens);
+    const declarations = toList(Object.entries(tokens), toDeclaration);
     return `[data-mode~="${mode}"] { ${declarations} }`;
 }
 

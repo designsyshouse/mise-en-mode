@@ -40,6 +40,7 @@ Holds the files responsible for generating resources for the system.
 - `get-schema.js` creates the mode YAML schema data.
 - `intents.yml` the list of intents expected in the system.
 - `paths.js` the collection of paths to important directories/files.
+- `to-list.js` a shared utility to stringify a collection of data.
 - `to-var.js` a shared utility to convert intents into CSS Custom Properties.
 - `write-files.js` writes all of the resulting files.
 

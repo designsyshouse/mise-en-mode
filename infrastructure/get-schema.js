@@ -34,7 +34,7 @@ function createValue(intent) {
 function createTree(intents) {
     return intents.reduce((acc, intent) => {
         return Object.assign(acc, {
-            [token]: {
+            [intent]: {
                 type: 'object',
                 additionalProperties: false,
                 required: ['$value'],

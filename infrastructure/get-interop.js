@@ -1,5 +1,6 @@
 import { readFileSync as read } from 'node:fs';
 import { load } from 'js-yaml';
+import { toList } from './to-list.js';
 import { toVar } from './to-var.js';
 
 import { INTENTS_YAML_PATH } from './paths.js';
@@ -29,16 +30,6 @@ function toSCSSVar(intent) {
 }
 
 /**
- * Creates collection of SCSS-CSS var assignments from intents.
- * 
- * @param {Array<String>} intents - A collection of $-prefixed intent names
- * @returns {String} - Stringified SCSS-CSS var assignments
- */
-function toSCSSVars(intents) {
-    return intents.map(toSCSSVar).join('\n');
-}
-
-/**
  * Creates a single interpolated assignment.
  * 
  * @param {String} intent - $-prefixed intent name
@@ -57,7 +48,7 @@ function toInterpolated(intent) {
  * @returns {String} - The :export key meant for import into CSS modules
  */
 function toModuleExports(intents) {
-    const interpolated = intents.map(toInterpolated).join('\n');
+    const interpolated = toList(intents, toInterpolated);
     return `:export { ${interpolated} }`;
 }
 
@@ -77,7 +68,7 @@ function toModuleExports(intents) {
 export function getInterop() {
     const intents = load(read(INTENTS_YAML_PATH, 'utf8'));
     return [
-        toSCSSVars(intents),
+        toList(intents, toSCSSVar),
         toModuleExports(intents)
     ].join('\n');
 }
