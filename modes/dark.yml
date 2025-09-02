@@ -2,7 +2,8 @@
 mode: dark
 tokens:
   $surface_primary_backgroundColor:
-    $value: CanvasText
+    $value: MidnightBlue
+  $surface_primary_foregroundColor:
+    $value: Cyan
   $text_primary_fontFamily:
-    $value: Arial
-    $fallback: sans-serif
+    $value: system-ui

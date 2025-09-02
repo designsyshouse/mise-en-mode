@@ -55,15 +55,12 @@ function linkify() {
 
         // Find the href for the given mode.
         const { href } = inventory.find((entry) => entry.mode === mode) || {};
-        
-        // If no href is found, bail out.
-        if (!href) return '';
 
         // Prepare as isomorphic.
         return customToString({
             href,
             rel: 'stylesheet',
-            title: mode
+            //title: mode
         }, function () {
             // Function to stringify object as attr="val".
             const toAttrs = ([attr, val]) => `${attr}="${val}"`;
@@ -92,11 +89,8 @@ function observer(preload = '') {
     range.setStartAfter(document.currentScript);
     range.collapse(true);
 
-    // Determine what HTML node should have the listener attached.
-    const root = document.currentScript?.getRootNode?.() || document;
-
-    // When a CSS animation ends:
-    root.addEventListener('animationend', async (ev) => {
+    // When any CSS animation ends:
+    window.addEventListener('animationend', async (ev) => {
         // Create a list of modes found on the element.
         const modes = new Set(ev.target.dataset?.mode?.split(' ') || []);
 

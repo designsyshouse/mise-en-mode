@@ -4,9 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Mise en Mode</title>
+        <style>
+            /* Surfaces */
+            body, main {
+                background-color: var(--🔒surface_primary_backgroundColor);
+                color: var(--🔒surface_primary_foregroundColor);
+                font-family: var(--🔒text_primary_fontFamily);
+            }
+        </style>
         <script type="module" src="mode-manager.js"></script>
     </head>
-    <body>
-        <main data-mode="dark"></main>
+    <body data-mode="light">
+        Light mode content
+        <main data-mode="dark">
+            Dark mode content
+        </main>
     </body>
 </html>

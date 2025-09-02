@@ -1,2 +1,3 @@
-[data-mode~="dark"] { --🔒surface_primary_backgroundColor:CanvasText;
---🔒text_primary_fontFamily:Arial; }
+[data-mode~="dark"] { --🔒surface_primary_backgroundColor:MidnightBlue;
+--🔒surface_primary_foregroundColor:Cyan;
+--🔒text_primary_fontFamily:system-ui; }

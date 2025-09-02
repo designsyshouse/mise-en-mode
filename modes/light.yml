@@ -2,7 +2,8 @@
 mode: light
 tokens:
   $surface_primary_backgroundColor:
-    $value: Canvas
+    $value: Cyan
+  $surface_primary_foregroundColor:
+    $value: MidnightBlue
   $text_primary_fontFamily:
-    $value: Roboto
-    $fallback: sans-serif
+    $value: fantasy

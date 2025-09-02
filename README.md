@@ -107,3 +107,7 @@ This will immediately write the HTML resources that would otherwise be appended 
     </body>
 </html>
 ```
+
+> [!NOTE]
+>
+> If your ecosystem includes scoped complexities, then more considerations will need to be added. For example, if the expectation is for this to work between Shadow DOM scopes, then the manager must be updated to listen to the root node of the `:host` and to append resources within.
